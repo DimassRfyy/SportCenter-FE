@@ -130,7 +130,7 @@ function Categories() {
       <div className="swiper-visit w-full overflow-hidden">
         <Swiper direction="horizontal" spaceBetween={16} slidesOffsetBefore={16} slidesOffsetAfter={16} slidesPerView="auto">
           <SwiperSlide className="!w-fit">
-            <a href="" className="card">
+            <Link to="/category" className="card">
               <div className="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
                 <img src="./assets/images/thumbnails/futsal.jpg" className="absolute w-full h-full object-cover" alt="thumbnail" />
                 <div className="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
@@ -140,10 +140,10 @@ function Categories() {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
           </SwiperSlide>
           <SwiperSlide className="!w-fit">
-            <a href="" className="card">
+            <Link to="/category" className="card">
               <div className="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
                 <img src="./assets/images/thumbnails/futsal.jpg" className="absolute w-full h-full object-cover" alt="thumbnail" />
                 <div className="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
@@ -153,10 +153,10 @@ function Categories() {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
           </SwiperSlide>
           <SwiperSlide className="!w-fit">
-            <a href="" className="card">
+            <Link to="/category" className="card">
               <div className="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
                 <img src="./assets/images/thumbnails/futsal.jpg" className="absolute w-full h-full object-cover" alt="thumbnail" />
                 <div className="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
@@ -166,7 +166,20 @@ function Categories() {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide className="!w-fit">
+            <Link to="/category" className="card">
+              <div className="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
+                <img src="./assets/images/thumbnails/futsal.jpg" className="absolute w-full h-full object-cover" alt="thumbnail" />
+                <div className="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
+                  <div>
+                    <h3 className="font-bold text-white">Futsal</h3>
+                    <p className="text-sm leading-[18px] text-white">10 Places</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
           </SwiperSlide>
         </Swiper>
       </div>
