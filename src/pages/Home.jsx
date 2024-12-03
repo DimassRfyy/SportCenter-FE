@@ -23,9 +23,9 @@ function Popular() {
       <div className="swiper-popular w-full overflow-hidden">
         <Swiper direction="horizontal" spaceBetween={16} slidesOffsetBefore={16} slidesOffsetAfter={16} slidesPerView="auto">
           <SwiperSlide className="!w-fit">
-            <a href="" className="card">
+            <Link to="/details" className="card">
               <div className="relative flex items-end w-[345px] h-[220px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
-                <img src="assets/images/thumbnails/thumb-2.jpg" className="absolute w-full h-full object-cover" alt="thumbnail" />
+                <img src="./assets/images/thumbnails/futsal-bandung.webp" className="absolute w-full h-full object-cover" alt="thumbnail" />
                 <div className="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-4 mb-4 bg-[#94959966] backdrop-blur-sm">
                   <div>
                     <h3 className="font-bold text-white">Euro Futsal</h3>
@@ -37,7 +37,7 @@ function Popular() {
                   </p>
                 </div>
               </div>
-            </a>
+            </Link>
           </SwiperSlide>
           <SwiperSlide className="!w-fit">
             <a href="" className="card">
