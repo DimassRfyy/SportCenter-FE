@@ -1,6 +1,7 @@
 import Category from "./pages/Category"
 import CheckBooking from "./pages/CheckBooking"
 import City from "./pages/City"
+import CreateBooking from "./pages/CreateBooking"
 import Details from "./pages/Details"
 import Home from "./pages/Home"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
@@ -16,6 +17,7 @@ function App() {
           <Route path="/city" element={<City />} />
           <Route path="/category" element={<Category />} />
           <Route path="/details" element={<Details />} />
+          <Route path="/create-booking" element={<CreateBooking />} />
         </Routes>
       </Router>
     </div>
