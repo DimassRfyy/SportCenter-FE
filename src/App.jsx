@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import SelectFields from "./pages/SelectFields"
 import Payment from "./pages/Payment"
 import PaymentFinish from "./pages/PaymentFinish"
+import DetailsBooking from "./pages/DetailsBooking"
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/create-booking" element={<CreateBooking />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/payment/finish" element={<PaymentFinish />} />
+          <Route path="/booking-details" element={<DetailsBooking />} />
         </Routes>
       </Router>
     </div>
