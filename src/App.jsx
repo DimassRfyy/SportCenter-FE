@@ -5,6 +5,7 @@ import CreateBooking from "./pages/CreateBooking"
 import Details from "./pages/Details"
 import Home from "./pages/Home"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import SelectFields from "./pages/SelectFields"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/city" element={<City />} />
           <Route path="/category" element={<Category />} />
           <Route path="/details" element={<Details />} />
+          <Route path="/select-fields" element={<SelectFields />} />
           <Route path="/create-booking" element={<CreateBooking />} />
         </Routes>
       </Router>

@@ -158,7 +158,7 @@ function Details() {
             <p className="font-bold text-[22px] leading-[26px]">Rp 100.000</p>
             <p className="text-sm leading-[26px] text-[#70758F]">/person</p>
           </div>
-          <Link to="/create-booking">
+          <Link to="/select-fields">
             <div className="flex items-center p-1 pl-5 w-fit gap-4 rounded-full bg-[#13181D]">
               <p className="font-bold text-white">Book Now</p>
               <img src="assets/images/icons/coupon.svg" className="w-[50px] h-[50px]" alt="icon" />
