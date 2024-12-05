@@ -57,7 +57,7 @@ const CreateBooking = () => {
   return (
     <>
       <HeaderCreateBooking />
-      <form action="{{ route('booking.store', $ticket) }}" method="POST" className="relative flex flex-col w-full px-4 gap-[18px] mt-5 pb-[30px] overflow-x-hidden">
+      <form action="/payment" method="POST" className="relative flex flex-col w-full px-4 gap-[18px] mt-5 pb-[30px] overflow-x-hidden">
         <div className="flex items-center justify-between rounded-3xl p-[6px] pr-[14px] bg-white overflow-hidden">
           <div className="flex items-center gap-[14px]">
             <div className="flex w-[90px] h-[90px] shrink-0 rounded-3xl bg-[#D9D9D9] overflow-hidden">
@@ -66,11 +66,7 @@ const CreateBooking = () => {
             <div className="flex flex-col gap-[6px]">
               <h3 className="font-semibold">Euro Futsal</h3>
               <div className="flex items-center gap-1">
-                <img src="assets/images/icons/location.svg') }}" className="w-[18px] h-[18px]" alt="icon" />
-                <p className="font-semibold text-xs leading-[18px]">Futsal</p>
-              </div>
-              <div className="flex items-center gap-1">
-                <img src="assets/images/icons/location.svg') }}" className="w-[18px] h-[18px]" alt="icon" />
+                <img src="assets/images/icons/location.svg" className="w-[18px] h-[18px]" alt="icon" />
                 <p className="font-semibold text-xs leading-[18px]">Jakarta</p>
               </div>
             </div>

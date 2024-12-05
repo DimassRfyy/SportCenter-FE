@@ -6,6 +6,7 @@ import Details from "./pages/Details"
 import Home from "./pages/Home"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import SelectFields from "./pages/SelectFields"
+import Payment from "./pages/Payment"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/details" element={<Details />} />
           <Route path="/select-fields" element={<SelectFields />} />
           <Route path="/create-booking" element={<CreateBooking />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
       </Router>
     </div>
