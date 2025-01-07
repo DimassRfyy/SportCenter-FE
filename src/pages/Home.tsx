@@ -119,7 +119,7 @@ export default function Home() {
               {cities.length > 0
                 ? cities.map((city) => (
                     <SwiperSlide key={city.id} className="!w-fit">
-                      <Link to="/city" className="card">
+                      <Link to={`/city/${city.slug}`} className="card">
                         <div className="flex items-center w-fit rounded-full text-nowrap p-[14px_20px] gap-[10px] bg-[#F8F8F9]">
                           <img src={`${STORAGE_URL}/${city.icon}`} style={{ width: "40px", height: "40px" }} alt="icon" />
                           <p className="font-bold text-sm leading-[21px]">{city.name}</p>
