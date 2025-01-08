@@ -139,7 +139,7 @@ export default function Home() {
               {categories.length > 0
                 ? categories.map((category) => (
                     <SwiperSlide key={category.id} className="!w-fit">
-                      <Link to="/category" className="card">
+                      <Link to={`/category/${category.slug}`} className="card">
                         <div className="relative flex items-end w-[170px] h-[200px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
                           <img src={`${STORAGE_URL}/${category.thumbnail}`} className="absolute w-full h-full object-cover" alt="thumbnail" />
                           <div className="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-[10px] mb-[10px] bg-[#94959966] backdrop-blur-sm">
