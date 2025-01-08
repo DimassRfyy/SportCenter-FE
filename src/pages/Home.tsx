@@ -90,7 +90,7 @@ export default function Home() {
               {places.length > 0
                 ? places.map((place) => (
                     <SwiperSlide key={place.id} className="!w-fit">
-                      <Link to={`/details`} className="card">
+                      <Link to={`/details/${place.slug}`} className="card">
                         <div className="relative flex items-end w-[345px] h-[220px] shrink-0 rounded-[30px] bg-[#D9D9D9] overflow-hidden">
                           <img src={`${STORAGE_URL}/${place.thumbnail}`} className="absolute w-full h-full object-cover" alt="thumbnail" />
                           <div className="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] mx-4 mb-4 bg-[#94959966] backdrop-blur-sm">
@@ -161,7 +161,7 @@ export default function Home() {
           <h2 className="font-bold">Now Available</h2>
           <div className="flex flex-col gap-3">
             {places.map((place) => (
-              <Link key={place.id} to="/details" className="card">
+              <Link key={place.id} to={`/details/${place.slug}`} className="card">
                 <div className="flex items-center justify-between rounded-3xl p-[6px] pr-[14px] bg-white overflow-hidden">
                   <div className="flex items-center gap-[14px]">
                     <div className="flex w-[90px] h-[90px] shrink-0 rounded-3xl bg-[#D9D9D9] overflow-hidden">

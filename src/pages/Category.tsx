@@ -62,7 +62,7 @@ export default function Category() {
 
         <section id="Places" className="flex flex-col gap-3 px-4 pb-10">
           {category?.places.map((place) => (
-            <Link to={`/details/${place.id}`} className="card" key={place.id}>
+            <Link to={`/details/${place.slug}`} className="card" key={place.id}>
               <div className="flex items-center justify-between rounded-3xl p-[6px] pr-[14px] bg-white overflow-hidden">
                 <div className="flex items-center gap-[14px]">
                   <div className="flex w-[90px] h-[90px] shrink-0 rounded-3xl bg-[#D9D9D9] overflow-hidden">

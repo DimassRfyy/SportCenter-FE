@@ -65,7 +65,7 @@ export default function City() {
         <section id="Places" className="flex flex-col gap-3 px-4 pb-10">
           {city.places.length > 0
             ? city.places.map((place) => (
-                <Link key={place.id} to={`/details`} className="card">
+                <Link key={place.id} to={`/details/${place.slug}`} className="card">
                   <div className="flex items-center justify-between rounded-3xl p-[6px] pr-[14px] bg-white overflow-hidden">
                     <div className="flex items-center gap-[14px]">
                       <div className="flex w-[90px] h-[90px] shrink-0 rounded-3xl bg-[#D9D9D9] overflow-hidden">
