@@ -26,7 +26,11 @@ export default function Details() {
   }, [slug]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="spinner"></div>
+      </div>
+    );
   }
 
   if (error) {
@@ -163,7 +167,7 @@ export default function Details() {
             <p className="font-bold text-[22px] leading-[26px]">{formatCurrency(place.price)}</p>
             <p className="text-sm leading-[26px] text-[#70758F]">/sesi</p>
           </div>
-          <Link to="/select-fields">
+          <Link to={`/select-fields/${place.slug}`}>
             <div className="flex items-center p-1 pl-5 w-fit gap-4 rounded-full bg-[#13181D]">
               <p className="font-bold text-white">Book Now</p>
               <img src="/assets/images/icons/coupon.svg" className="w-[50px] h-[50px]" alt="icon" />

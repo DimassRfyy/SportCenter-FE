@@ -20,7 +20,7 @@ export default function App() {
           <Route path="/category/:slug" element={<Category />} />
           <Route path="/city/:slug" element={<City />} />
           <Route path="/details/:slug" element={<Details />} />
-          <Route path="/select-fields" element={<SelectFields />} />
+          <Route path="/select-fields/:slug" element={<SelectFields />} />
           <Route path="/create-booking" element={<CreateBooking />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/payment-finish" element={<PaymentFinish />} />

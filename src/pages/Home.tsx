@@ -72,7 +72,11 @@ export default function Home() {
   }, []);
 
   if (loadingCategories || loadingCities || loadingPlaces) {
-    return <p>Loading...</p>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="spinner"></div>
+      </div>
+    );
   }
 
   if (error) {

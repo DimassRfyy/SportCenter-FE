@@ -27,7 +27,11 @@ export default function City() {
   }, [slug]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="spinner"></div>
+      </div>
+    );
   }
 
   if (error) {
