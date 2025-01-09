@@ -38,7 +38,7 @@ export interface Place {
     photos: Photo[];
 }
 
-interface Field {
+export interface Field {
     id: number;
     name: string;
     price: number;
@@ -66,5 +66,14 @@ export interface BookingDetails {
     booking_date: string;
     booking_time: string;
     total_sesi: number
+}
+
+export type bookingFormData = {
+    name: string;
+    email: string;
+    phone_number: string;
+    booking_date: string;
+    booking_time: string;
+    total_sesi: number;
 }
 
