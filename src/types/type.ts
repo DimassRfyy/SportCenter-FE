@@ -55,6 +55,7 @@ interface Photo {
 
 export interface BookingDetails {
     id: number;
+    trx_id: string;
     place_id: number;
     field_id: number;
     name: string;
@@ -66,6 +67,8 @@ export interface BookingDetails {
     booking_date: string;
     booking_time: string;
     total_sesi: number
+    place: Place;
+    field: Field;
 }
 
 export type bookingFormData = {
