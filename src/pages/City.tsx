@@ -94,7 +94,7 @@ export default function City() {
             : "No places available"}
         </section>
       </main>
-      <BottomNavbar />
+      <BottomNavbar currentRoute="discover" />
     </>
   );
 }

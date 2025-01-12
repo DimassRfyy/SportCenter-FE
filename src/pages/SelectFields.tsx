@@ -86,7 +86,7 @@ export default function SelectFields() {
       <main className="relative flex flex-col w-full gap-[30px] mt-[30px] overflow-x-hidden">
         <div className="flex flex-col items-center text-center gap-5 px-4">
           <div className="w-[120px] h-[120px] rounded-[50px] bg-[#D9D9D9] overflow-hidden">
-            <img src="/assets/images/thumbnails/futsal-bandung.webp" className="w-full h-full object-cover" alt="thumbnail" />
+            <img src={`${STORAGE_URL}/${place.thumbnail}`} className="w-full h-full object-cover" alt="thumbnail" />
           </div>
           <p className="font-bold text-xl leading-[30px]">
             <span className="text-[#F97316]">{place.fields.length}</span> Fields available on

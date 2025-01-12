@@ -91,7 +91,7 @@ export default function Category() {
           {!category || category.places.length === 0 ? <p className="text-center text-white">No places available</p> : ""}
         </section>
       </main>
-      <BottomNavbar />
+      <BottomNavbar currentRoute="discover"/>
     </>
   );
 }

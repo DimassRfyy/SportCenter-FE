@@ -190,7 +190,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <BottomNavbar />
+      <BottomNavbar currentRoute="discover"/>
     </>
   );
 }

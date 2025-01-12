@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 
-export default function BottomNavbar() {
-    return (
-        <nav id="Bottom-Nav" className="fixed bottom-0 w-full max-w-[640px] bg-white px-4 py-5 z-30">
+interface BottomNavbarProps {
+  currentRoute: string;
+}
+
+export default function BottomNavbar({ currentRoute }: BottomNavbarProps) {
+  return (
+    <nav id="Bottom-Nav" className="fixed bottom-0 w-full max-w-[640px] bg-white px-4 py-5 z-30">
       <ul className="flex justify-evenly max-[400px]:justify-between">
-        <li className="text-{{ Route::currentRouteName() == 'front.index' ? '[#F97316]' : '[#13181D]' }}">
+      <li className={`text-${currentRoute === 'discover' ? "[#F97316]" : "[#13181D]"}`}>
           <Link to="/" className="menu">
             <div className="group flex flex-col items-center text-center gap-[10px]">
               <div className="w-6 h-6 flex shrink-0">
@@ -25,8 +29,8 @@ export default function BottomNavbar() {
           </Link>
         </li>
 
-        <li className="text-{{ Route::currentRouteName() == 'booking.check' ? '[#F97316]' : '[#13181D]' }}">
-          <Link to='/check-booking' className="menu">
+        <li className={`text-${currentRoute === 'check-booking' ? "[#F97316]" : "[#13181D]"}`}>
+          <Link to="/check-booking" className="menu">
             <div className="group flex flex-col items-center text-center gap-[10px]">
               <div className="w-6 h-6 flex shrink-0">
                 <svg className="transition-all duration-300 group-hover:fill-[#F97316]  fill-current" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,5 +84,5 @@ export default function BottomNavbar() {
         </li>
       </ul>
     </nav>
-    )
+  );
 }

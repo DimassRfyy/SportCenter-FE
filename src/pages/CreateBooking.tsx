@@ -188,6 +188,7 @@ export default function CreateBooking() {
                 <img src="/assets/images/icons/is_indoor.png" className="w-[18px] h-[18px]" alt="icon" />
                 <p className="font-semibold text-xs leading-[18px]">{field.is_indoor ? "Indoor" : "Outdoor"}</p>
               </div>
+              <p className="font-bold text-sm leading-[21px] text-[#F97316]">{formatCurrency(field.price)}</p>
             </div>
           </div>
           <p className="w-fit flex shrink-0 items-center gap-[2px] rounded-full p-[6px_8px] bg-[#FFE5D3]">
@@ -300,6 +301,8 @@ export default function CreateBooking() {
                 onChange={handleChange}
                 name="booking_time"
                 id="time"
+                min={place.opening_hours}
+                max={place.closing_hours}
                 className="appearance-none outline-none py-[14px] !bg-transparent w-full font-semibold text-sm leading-[21px] placeholder:font-normal placeholder:text-[#13181D]"
               />
             </div>

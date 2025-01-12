@@ -117,7 +117,7 @@ function CheckBooking() {
         </form>
       </main>
 
-      <BottomNavbar />
+      <BottomNavbar currentRoute="check-booking"/>
     </>
   );
 }

@@ -37,7 +37,7 @@ export default function Payment() {
       const parsedData: formData = JSON.parse(storedData);
       setFormData(parsedData);
 
-      if (!parsedData.place_slug || !parsedData.field_id) {
+      if (Object.values(parsedData).some((value) => !value)) {
         navigate("/");
       } else {
         const fetchPlace = async () => {
@@ -334,10 +334,10 @@ export default function Payment() {
             <input type="file" name="proof" id="payment-proof" className="absolute -z-10 opacity-0" onChange={handleFileChange} ref={fileInputRef} />
           </div>
           {formErrors.find((error) => error.path.includes("proof")) && (
-              <p className="text-sm leading-[21px]" style={{ color: "#E70011" }}>
-                {formErrors.find((error) => error.path.includes("proof"))?.message}
-              </p>
-            )}
+            <p className="text-sm leading-[21px]" style={{ color: "#E70011" }}>
+              {formErrors.find((error) => error.path.includes("proof"))?.message}
+            </p>
+          )}
 
           <button disabled={loading} type="submit" className="flex items-center justify-between p-1 pl-5 w-full gap-4 rounded-full bg-[#13181D]">
             <p className="font-bold text-white">{loading ? "Submitting..." : "Confirm My Payment"}</p>
