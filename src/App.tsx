@@ -10,6 +10,7 @@ import PaymentFinish from "./pages/PaymentFinish";
 import CheckBooking from "./pages/CheckBooking";
 import DetailsBooking from "./pages/DetailsBooking";
 import "swiper/swiper-bundle.css";
+import Wishlist from "./pages/Wishlist";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/payment-finished" element={<PaymentFinish />} />
           <Route path="/check-booking" element={<CheckBooking />} />
           <Route path="/details-booking" element={<DetailsBooking />} />
+          <Route path="/wishlist" element={<Wishlist />} />
         </Routes>
       </BrowserRouter>
     </div>

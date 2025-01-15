@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Place } from "../types/type";
+import { Place, Wishlist } from "../types/type";
 import apiClient, { STORAGE_URL } from "../services/apiService";
 import { formatCurrency } from "../services/formatCurrency";
 
 export default function Details() {
   const { slug } = useParams();
   const [place, setPlace] = useState<Place | null>(null);
+  const [wishlist, setWishlist] = useState<Wishlist[]>([]);
+  const [isWishlist, setIsWishlist] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -24,6 +26,42 @@ export default function Details() {
     };
     fetchPlace();
   }, [slug]);
+
+  useEffect(() => {
+    const storedWishlist = localStorage.getItem("wishlist");
+    if (storedWishlist) {
+      const parsedWishlist: Wishlist[] = JSON.parse(storedWishlist);
+      setWishlist(parsedWishlist);
+      if (place) {
+        const placeExist = parsedWishlist.find((item: Wishlist) => item.place_id === place.id);
+        if (placeExist) {
+          setIsWishlist(true);
+        }
+      }
+    }
+  }, [place]);
+
+  const handleAddToWishlist = () => {
+    if (place) {
+      setIsWishlist(true);
+      const placeExist = wishlist.find((item) => item.place_id === place.id);
+      if (placeExist) {
+        alert("Place sudah ditambahkan ke wishlist");
+        setIsWishlist(false);
+      } else {
+        const newWishlist: Wishlist = {
+          place_id: place.id,
+          place_slug: place.slug,
+        };
+        const updatedWhislist = [...wishlist, newWishlist];
+        setWishlist(updatedWhislist);
+
+        localStorage.setItem("wishlist", JSON.stringify(updatedWhislist));
+        alert("Place berhasil ditambahkan ke wishlist");
+        setIsWishlist(false);
+      }
+    }
+  };
 
   if (loading) {
     return (
@@ -47,9 +85,9 @@ export default function Details() {
           <Link to="/">
             <img src="/assets/images/icons/back.svg" className="w-12 h-12" alt="icon" />
           </Link>
-          <a href="#">
-            <img src="/assets/images/icons/heart.svg" className="w-12 h-12" alt="icon" />
-          </a>
+          <button onClick={handleAddToWishlist} disabled={isWishlist}>
+            <img src={isWishlist ? "/assets/images/icons/heart-red.png" : "/assets/images/icons/heart.svg"} className="w-12 h-12" alt="icon" />
+          </button>
         </div>
         <div id="Title" className="absolute bottom-0 w-full p-4 pt-0 z-10">
           <div className="flex items-center justify-between w-full h-fit rounded-[17px] border border-white/40 p-[8px_10px] bg-[#94959966] backdrop-blur-sm z-10">

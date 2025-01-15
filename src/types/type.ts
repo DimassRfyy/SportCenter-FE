@@ -80,3 +80,8 @@ export type bookingFormData = {
     total_sesi: number;
 }
 
+export interface Wishlist {
+    place_id: number;
+    place_slug: string;
+}
+
