@@ -1,7 +1,7 @@
 
 <h1 align="center">Selamat datang di repository SportCenter! 👋🏻</h1>
 
-![SportCenter-Preview](?raw=true)
+![SportCenter-Preview](https://github.com/DimassRfyy/SportCenter-FE/blob/main/public/assets/images/thumbnails/review.jpg?raw=true)
 
 <p></p>
 
